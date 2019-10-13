@@ -1,0 +1,42 @@
+/**
+ *  BUGO SITE HEADER SIMPLE
+ **/
+
+.site-header-simple {
+  background-color: $dark;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include set-padding(0, false, 0, false);
+
+  }
+
+  .site-brand {
+    @include ms-respond(max-width,2.5);
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .nav-main {
+    justify-self: flex-end;
+
+    .nav-link {
+      @include ms-respond(font-size,0);
+    }
+  }
+
+  /**
+   * todo: need to make global
+   **/
+  .mobile-button-container {
+    @include respond_to(md){
+      display: none;
+    }
+  }
+}
