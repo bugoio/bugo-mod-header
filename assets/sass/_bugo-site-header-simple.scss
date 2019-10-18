@@ -3,7 +3,7 @@
  **/
 
 .site-header-simple {
-  background-color: $dark;
+  background-color: $header-bg;
   position: relative;
 
   .container {
@@ -24,7 +24,7 @@
     }
 
     a {
-      color: $branding-color;
+      color: $header-link;
       @include ms-respond(font-size,0.5);
     }
   }
@@ -35,6 +35,7 @@
 
     .nav-link {
       @include ms-respond(font-size,0);
+      color: $header-link;
     }
 
     .nested {
