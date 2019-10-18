@@ -1,24 +1,3 @@
-/**
- * BUGO SITE HEADER
- *
- * * note
- * TODO: something
- * ! Deprecate
- * ? Question
- * @param myParam
- **/
-
-@import "bugo-site-header-variables";
-@debug "Loading Bugo Site Header Module SASS";
-@import "custom-variables";
-
-@import "bugo-site-header-default";
-@import "bugo-site-header-simple";
-@import "bugo-site-main-nav";
-@import "bugo-site-mobile-nav";
-
-
-
 .nav-main {
   position: relative;
   z-index: 100;
