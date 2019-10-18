@@ -16,7 +16,7 @@
   <div class="container nav-container">
     <!-- Logo -->
     <div class="site-brand h1s">
-      <a href="/" title="Go to the home page" tabindex="0">
+      <a href="/" class="nowrap" title="Go to the home page" tabindex="0">
         {{ if .Site.Data.organization.header_logo }}
             {{ $imageParams := (dict "page" .Page "site" .Site "url" .Site.Data.organization.header_logo "transform" false ) }}
             <img
@@ -26,7 +26,7 @@
               alt="{{ .Site.Data.organization.organization_name }} Logo"
             />
         {{ else }}
-          {{ .Site.Title }}
+          {{ partial "utilities/get-org-name" . }}
         {{ end }}
       </a>
     </div>

@@ -4,6 +4,7 @@
 
 .site-header-simple {
   background-color: $dark;
+  position: relative;
 
   .container {
     display: flex;
@@ -21,13 +22,45 @@
       max-width: 100%;
       height: auto;
     }
+
+    a {
+      color: $branding-color;
+      @include ms-respond(font-size,0.5);
+    }
   }
 
   .nav-main {
     justify-self: flex-end;
+    position: static;
 
     .nav-link {
       @include ms-respond(font-size,0);
+    }
+
+    .nested {
+      position: static;
+    }
+
+    .dropdown-menu {
+      top: calc(100% - 1rem);
+      // left: 0;
+      // right: 0;
+      width: 100vw;
+
+      &:before {
+        display: none;
+      }
+
+      ul {
+        display: flex !important;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-height: ms(6.5);
+        li {
+          flex: 1 1 33%;
+        }
+      }
     }
   }
 

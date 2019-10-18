@@ -26,7 +26,7 @@ $main-menu-color-dark:       $white !default;
 $main-menu-link-margin:      0 0.5rem !default;
 $main-menu-link-padding:     0.25rem 0.5rem !default;
 
-$main-menu-dropdown-bg:          darken( $light, 10% ) !default;
+$main-menu-dropdown-bg:          $global-menu-bg !default;
 $main-menu-dropdown-color:       $black !default;
 $main-menu-dropdown-bg-dark:     lighten( $dark, 10% ) !default;
 $main-menu-dropdown-color-dark:  $white !default;
@@ -38,3 +38,5 @@ $main-menu-padding-y:  false !default; // false | modular scale ratio
 
 $main-menu-justify: flex-end !default;
 $main-menu-whitespace: normal !default;
+
+
