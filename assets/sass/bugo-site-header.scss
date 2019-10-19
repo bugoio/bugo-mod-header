@@ -17,7 +17,11 @@
 @import "bugo-site-main-nav";
 @import "bugo-site-mobile-nav";
 
-
+.site-brand {
+  a {
+    font-weight: $branding-font-weight;
+  }
+}
 
 .nav-main {
   position: relative;
