@@ -57,7 +57,8 @@
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: flex-start;
-        max-height: ms(6.5);
+        @include ms-respond(max-height,6.5);
+
         li {
           flex: 1 1 33%;
         }
