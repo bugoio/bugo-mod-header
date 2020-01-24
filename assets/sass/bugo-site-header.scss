@@ -40,8 +40,10 @@
     padding: $main-menu-link-padding;
     margin: $main-menu-link-margin;
     @include ms-respond(font-size,$main-menu-font);
-    @media (prefers-color-scheme: dark) {
-      color: $main-menu-color-dark;
+    @if $global-dark-mode {
+      @media (prefers-color-scheme: dark) {
+        color: $main-menu-color-dark;
+      }
     }
   }
 
@@ -53,16 +55,17 @@
       color: $main-menu-dropdown-color;
       @include ms-respond(font-size,$main-menu-dropdown-font);
     }
-
-    @media (prefers-color-scheme: dark) {
-      &::before {
-        content: "";
-        display: block;
-        width: 0;
-        height: 0;
-        border-left: 0.5rem solid transparent;
-        border-right: 0.5rem solid transparent;
-        border-bottom: 1rem solid $main-menu-dropdown-bg;
+    @if $global-dark-mode = true {
+      @media (prefers-color-scheme: dark) {
+        &::before {
+          content: "";
+          display: block;
+          width: 0;
+          height: 0;
+          border-left: 0.5rem solid transparent;
+          border-right: 0.5rem solid transparent;
+          border-bottom: 1rem solid $main-menu-dropdown-bg;
+        }
       }
     }
   }

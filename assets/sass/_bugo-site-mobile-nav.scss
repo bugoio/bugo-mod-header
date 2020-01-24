@@ -13,11 +13,13 @@
 
   &.active {
     .nav-mobile {
+      visibility: visible;
       transform: translateY(0) translateX(-50%);
     }
   }
 
   .nav-mobile {
+    visibility: hidden;
     position: absolute;
     z-index: -1;
     top: 100%;
