@@ -16,9 +16,11 @@
   color: $header-color;
   background-color: $header-bg;
 
-  @media (prefers-color-scheme: dark) {
-    color: $header-color-dark;
-    background-color: $header-bg-dark;
+  @if $global-dark-mode {
+    @media (prefers-color-scheme: dark) {
+      color: $header-color-dark;
+      background-color: $header-bg-dark;
+    }
   }
 
   .site-brand {
@@ -31,9 +33,10 @@
     @include ms-respond(font-size,$branding-font-size);
     a {
       color: $branding-color;
-
-      @media (prefers-color-scheme: dark) {
-        color: $branding-color-dark;
+      @if $global-dark-mode {
+        @media (prefers-color-scheme: dark) {
+          color: $branding-color-dark;
+        }
       }
     }
 
