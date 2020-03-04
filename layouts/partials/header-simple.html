@@ -18,10 +18,10 @@
     <div class="site-brand h1s">
       <a href="/" class="nowrap" title="Go to the home page" tabindex="0">
         {{ if .Site.Data.organization.header_logo }}
-            {{ $imageParams := (dict "page" .Page "site" .Site "url" .Site.Data.organization.headerLogo "transform" false ) }}
+            {{ $imageParams := (dict "page" .Page "site" .Site "url" .Site.Data.organization.header_logo "transform" false ) }}
             <img
               class=""
-              src="{{ .Site.Data.organization.headerLogo | safeHTMLAttr }}"
+              src="{{ .Site.Data.organization.header_logo | safeHTMLAttr }}"
               aria-hidden="true"
               alt="Logo"
             />
@@ -34,7 +34,7 @@
     <div class="nav-main">
       {{ .Scratch.Set "location" "main" }}
       {{ .Scratch.Set "menu" .Site.Menus.main }}
-      {{ partial "nav-horizontal" .}}
+      {{ partial "nav-horizontal-wcag" .}}
     </div>
     <!-- Mobile Menu Buggon -->
     <div class="mobile-button-container">

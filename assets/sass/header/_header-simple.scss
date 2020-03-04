@@ -14,21 +14,6 @@
 
   }
 
-  .site-brand {
-    @include ms-respond(max-width,2.5);
-
-    img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-    }
-
-    a {
-      color: $header-link;
-      @include ms-respond(font-size,0.5);
-    }
-  }
-
   .nav-main {
     justify-self: flex-end;
     position: static;
