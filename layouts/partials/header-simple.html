@@ -17,7 +17,7 @@
     <!-- Logo -->
     <div class="site-brand h1s">
       <a href="/" class="nowrap" title="Go to the home page" tabindex="0">
-        {{ if .Site.Data.organization.headerLogo }}
+        {{ if .Site.Data.organization.header_logo }}
             {{ $imageParams := (dict "page" .Page "site" .Site "url" .Site.Data.organization.headerLogo "transform" false ) }}
             <img
               class=""
